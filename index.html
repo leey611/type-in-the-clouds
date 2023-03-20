@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #text-canvas, #shaderText {
+            display: none;
+			position: absolute;
+			background-color: #000000;
+			top: 0px;
+			right: 0px;
+			z-index: 3000;
+			cursor: crosshair;
+			touch-action: none;
+		}
+
+        #timezone {
+            font-size: 1rem;
+            font-weight: bold;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 1rem;
+            text-transform: uppercase;
+            
+        }
+
+        /* #timezone:after {
+            content: "";
+            position: fixed;
+            background: #000000;
+            top: 100%;
+            left: 10px;
+
+            right: 0;
+            height: 10px;
+
+        } */
+
+        #mousePos {
+            font-size: 1rem;
+            font-weight: bold;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            padding: 1rem;
+            text-transform: uppercase;
+        }
+
+        #typeTarget {
+            font-size: 1rem;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 1rem;
+            text-transform: uppercase;
+        }
+
+        #frame {
+            
+        }
+
+        
+
+    </style>
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.148.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.148.0/examples/jsm/",
+            "t": "https://esm.run/three-bmfont-text"
+          }
+        }
+    </script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="timezone"></div>
+    <div id="typeTarget">Try typing... <span></span></div>
+    <!-- <div id="mousePos">
+        <div>MouseX: <span id="mouseX">0</span></div>
+        <div>MouseY: <span id="mouseY">0</span></div>
+    </div> -->
+    <div id="frame"></div>
+    <canvas id="text-canvas"></canvas>
+    <canvas id="shaderText"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
