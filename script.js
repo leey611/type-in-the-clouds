@@ -40,13 +40,13 @@ let currentIntersectHorse = null
 
 // variables for font and typing
 const textureLoader = new THREE.TextureLoader()
-const colorTexture = textureLoader.load('assets/metal032_1k_color.jpg')
+const colorTexture = textureLoader.load('assets/metal032_color.jpg')
 //const displacementTexture = textureLoader.load('/assets/Metal032_1K_Displacement.jpg')
 //const heightTexture = textureLoader.load('/assets/Metal_006_height.png')
-const normalTexture = textureLoader.load('assets/metal032_1k_normalGL.jpg')
+const normalTexture = textureLoader.load('assets/metal032_normalGL.jpg')
 //const ambientOcclusionTexture = textureLoader.load('/assets/Metal_006_ambientOcclusion.jpg')
-const metalnessTexture = textureLoader.load('assets/metal032_1k_metalness.jpg')
-const roughnessTexture = textureLoader.load('assets/metal032_1K_roughness.jpg')
+const metalnessTexture = textureLoader.load('assets/metal032_metalness.jpg')
+const roughnessTexture = textureLoader.load('assets/metal032_roughness.jpg')
 let myFont
 let text = "type something"
 let firstLetter = true;
